@@ -5,9 +5,58 @@
   %link{:href => "/3rdparty/bootstrap-3.3.7/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
   %link{:href => "/static/css/style.css", :rel => "stylesheet", :type => "text/css"}
 
+  %link{:href => "/static/css/landing.css", :rel => "stylesheet", :type => "text/css"}
+
   %script{:src => "/3rdparty/jquery/jquery-3.2.1.min.js", :type => "text/javascript"}
   %script{:src => "/3rdparty/bootstrap-3.3.7/js/bootstrap.min.js", :type => "text/javascript"}
 
-%body
-  .container-fluid
-    .row.col-lg-12 this our story ...
+%body#page-top{"data-spy"=>'scroll',"data-target"=>".navbar-fixed-top"}
+  %nav.navbar.navbar-custom.navbar-fixed-top{:role=>"navigation"}
+    -#.container
+    -#  .navbar-header
+    -#    %button.navbar-toggle{:type=>"button","data-toggle"=>"collapse","data-target"=>".navbar-main-collapse"}
+    -#      Menu
+    -#      %i
+    -#      %a.navbar-brand.page-scroll{:href=>"/"}
+    -#  .collapse.navbar-collapse.navbar-right.navbar-main-collapse.text-center
+  %header.intro
+    #our_story-intro.intro-body
+      .container
+        .row
+          .col-xs-12
+            %h1.brand-heading 这是这个页面的介绍标题
+            %p.intro-text 这个页面的内容概要会写在这里
+        .row
+          .col-xs-12.text-center
+            %a{:href=>"#secondary_school",:style=>"font-size:48px;color:white;"}
+              %span.glyphicon.glyphicon-chevron-down
+  %section#secondary_school.content-section
+    .container
+      .row
+        .col-xs-12.col-md-offset-2.col-md-8
+          %h1
+            这一块的介绍内容,就是要长。。。范德萨发
+      .row.feature-row-1
+        .col-xs-12.col-sm-6.col-md-offset-2.col-md-4.col-lg-offset-3.col-lg-3.feature-text-left
+          %h1 关键字
+          %h3 内容
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3.feature-screenshot.thumbnail
+          %img{:style=>"width:260px;height:450px;",:src=>"...",:alt=>"..."}
+
+  %section#university.content-section
+  %section#work.content-section
+  %footer
+    .container
+      .row.copyright-row
+        .hidden-xs.hidden-sm
+          %small
+            Copyright © 2017 LiYan
+            %span.glyphicon.glyphicon-heart
+            ZhaoLiPing All rights reserved.
+        .visible-xs.visible-sm.col-xs-12.col-sm-12
+          %small
+            Copyright © 2017 LiYan
+            %span.glyphicon.glyphicon-heart
+            ZhaoLiPing
+        .visible-xs.visible-sm.col-xs-12.col-sm-12
+          %small All rights reserved.
